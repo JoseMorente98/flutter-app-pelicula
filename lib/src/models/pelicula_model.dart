@@ -14,6 +14,7 @@ class Peliculas {
 }
 
 class Pelicula {
+  String uniqueId;
   double popularity;
   int voteCount;
   bool video;
@@ -34,6 +35,13 @@ class Pelicula {
       return 'https://www.samsung.com/etc/designs/smg/global/imgs/support/cont/NO_IMG_600x600.png';
     }
     return 'https://image.tmdb.org/t/p/original/$posterPath';
+  }
+
+  getBackdropPath() {
+    if(backdropPath == null) {
+      return 'https://www.samsung.com/etc/designs/smg/global/imgs/support/cont/NO_IMG_600x600.png';
+    }
+    return 'https://image.tmdb.org/t/p/original/$backdropPath';
   }
 
   Pelicula({
